@@ -1,0 +1,48 @@
+.product {
+  padding-top: 100px;
+  &__container {
+    margin: 0 auto;
+    max-width: 1390px;
+    display: flex;
+    gap: 16px;
+  }
+  &__images {
+    position: relative;
+    &-image {
+      width: 686px;
+      height: 878px;
+    }
+    &-list {
+      position: absolute;
+      top: 26px;
+      left: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      &-item {
+        box-sizing: border-box;
+        cursor: pointer;
+        height: 91px;
+        width: 70px;
+        background-color: #fff;
+      }
+      &-img {
+        width: 70px;
+        height: 91px;
+        opacity: 0.3;
+        transition: all linear 0.2s;
+        &_active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__reviews {
+    display: flex;
+    gap: 10px;
+  }
+}

@@ -22,30 +22,3 @@ export default {
   },
 };
 </script>
-
-<style scoped lang="scss">
-.nav-buttons {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-
-  &__button {
-    border: none;
-    height: 30px;
-    width: 30px;
-
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-  }
-  &__ico {
-    display: block;
-    margin: 0;
-    height: 20px;
-    width: 20px;
-  }
-}
-</style>

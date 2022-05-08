@@ -1,0 +1,15 @@
+.information {
+  display: flex;
+  flex-direction: column;
+  &__title {
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    &-item {
+      &-link {
+        color: $colorBrandBlack;
+      }
+    }
+  }
+}

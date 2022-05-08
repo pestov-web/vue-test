@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header ref="header" class="header">
     <div class="header__container">
       <a href="#" class="logo">
         <h1 class="logo__title">logo</h1>
@@ -17,31 +17,17 @@ export default {
   props: {
     msg: String,
   },
+  mounted() {
+    window.addEventListener("scroll", this.onScroll);
+  },
+  methods: {
+    onScroll() {},
+  },
+  unmounted() {
+    window.removeEventListener("scroll", this.onScroll);
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-.header {
-  height: 40px;
-  width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  &__container {
-    display: flex;
-    margin: 0 auto;
-    height: 100%;
-    max-width: 1440px;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-.logo {
-  text-decoration: none;
-  cursor: pointer;
-  color: black;
-  font-size: 12px;
-  &__title {
-    text-transform: uppercase;
-  }
-}
-</style>
+<style scoped lang="scss"></style>

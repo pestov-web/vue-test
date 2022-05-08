@@ -7,5 +7,3 @@ export default {
   name: "NavigationBurgerButton",
 };
 </script>
-
-<style scoped></style>
