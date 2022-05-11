@@ -31,8 +31,10 @@
   &__reviews {
     display: flex;
     margin-top: 17px;
+    align-items: center;
 
     &-count {
+      margin-right: 5px;
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;

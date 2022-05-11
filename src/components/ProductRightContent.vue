@@ -6,9 +6,8 @@
       <div class="right-content__reviews">
         <TheLink :href="'#'" :name="'Отзывы'" />
         <ReviewsStars :stars="stars" />
-        <span class="right-content__reviews-count"
-          >{{ reviews }} отзывов <TheIcons :ico="'chevronRight'" :size="15"
-        /></span>
+        <span class="right-content__reviews-count">{{ reviews }} отзывов </span
+        ><TheIcons :ico="'chevronRight'" :size="15" />
       </div>
       <p class="right-content__price">
         <span class="right-content__price-discounted"
