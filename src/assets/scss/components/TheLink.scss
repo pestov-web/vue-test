@@ -1,0 +1,15 @@
+.link {
+  color: $colorBrandBlack;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity linear 0.4s;
+  &:hover {
+    opacity: 0.6;
+  }
+  &_type_underlined {
+    text-decoration: underline;
+  }
+}

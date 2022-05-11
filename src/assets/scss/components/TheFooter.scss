@@ -1,12 +1,52 @@
 .footer {
-  height: 200px;
+  height: 400px;
   width: 100%;
+  padding: 25px 0;
+  @include lg {
+    padding: 108.5px 0;
+    height: 200px;
+  }
   &__container {
+    box-sizing: border-box;
     margin: 0 auto;
     max-width: 1390px;
     height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+
+    padding: 0 20px;
+    @include md {
+      flex-direction: row;
+      justify-content: center;
+      justify-items: center;
+    }
+  }
+  &__links-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 10px;
+    @include lg {
+      display: flex;
+      justify-content: space-around;
+    }
+    @include xl {
+      justify-content: center;
+      gap: 207px;
+    }
+  }
+  &__form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 58px;
+    @include sm {
+      justify-content: flex-start;
+    }
+    @include md {
+      justify-content: center;
+      margin: 0;
+    }
   }
 }

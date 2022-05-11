@@ -1,0 +1,83 @@
+.right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 686px;
+  &__container {
+    padding-left: 20px;
+  }
+  &__title {
+    margin: 8px 0 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: $colorBrandBlack;
+    text-align: left;
+    @include lg {
+      margin: 22px 0 0;
+    }
+  }
+  &__subtitle {
+    margin: 8px 0 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    color: $colorBrandGrey;
+  }
+  &__reviews {
+    display: flex;
+    margin-top: 17px;
+
+    &-count {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.04em;
+      color: $colorBrandBlack;
+    }
+  }
+  &__price {
+    margin: 47.5px 0 11px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    &-discounted {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    &-current {
+      margin-right: 10px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.04em;
+      text-decoration-line: line-through;
+      color: $colorBrandGrey;
+    }
+  }
+  &__discount {
+    display: flex;
+    gap: 9px;
+    &-item {
+      box-sizing: border-box;
+      padding: 0 8px;
+      height: 24px;
+      border: 1px solid $colorBrandBlack;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.04em;
+      color: $colorBrandBlack;
+      justify-content: center;
+    }
+  }
+}

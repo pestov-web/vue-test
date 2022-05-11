@@ -1,0 +1,14 @@
+.button {
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity linear 0.5s;
+  &:hover {
+    opacity: 0.4;
+  }
+  &_disabled {
+    background: $colorBrandGrey !important;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

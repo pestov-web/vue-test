@@ -3,22 +3,28 @@
 @import "abstracts/functions";
 @import "abstracts/mixins";
 
-//vendors
-
 // base
 @import "base/reset";
 @import "base/typography";
 
 // layout
-@import "layout/Body";
+@import "layout/body";
+@import "layout/button";
 
 //components
+@import "components/TheLink";
+@import "components/TheIcons";
 @import "components/TheHeader";
+@import "components/ModalMenu";
 @import "components/NavigationButtons";
-@import "components/NavigationBurgerButton";
 @import "components/ProductCurrent";
+@import "components/ProductLeftContent";
+@import "components/ProductRightContent";
+@import "components/ReviewsStars";
+@import "components/BuyForm";
+@import "components/ProductLinks";
 @import "components/ProductGallery";
 @import "components/TheFooter";
-@import "components/InformationForBuyers";
-@import "components/AboutUs";
+@import "components/FooterLinksList";
 @import "components/SubscribeNewsletter";
+@import "components/ModalMessage";

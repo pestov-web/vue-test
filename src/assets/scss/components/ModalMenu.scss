@@ -1,0 +1,45 @@
+.modal-menu {
+  &__overlay {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: table;
+    transition: all 0.3s ease;
+  }
+  &__container {
+    box-sizing: border-box;
+    padding: 78px 0 0 30px;
+    position: relative;
+    width: 100%;
+    height: 277px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    align-items: flex-start;
+
+    &-item {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+  &__button {
+    position: absolute;
+    right: 16.5px;
+    top: 15px;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background: none;
+  }
+}

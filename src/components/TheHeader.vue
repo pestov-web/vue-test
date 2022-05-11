@@ -1,10 +1,10 @@
 <template>
-  <header ref="header" class="header">
+  <header ref="header" class="header" :class="{ header_hidden: !showHeader }">
     <div class="header__container">
       <a href="#" class="logo">
         <h1 class="logo__title">logo</h1>
       </a>
-      <NavigationButtons />
+      <NavigationButtons :toggleModalMenu="toggleModalMenu" />
     </div>
   </header>
 </template>
@@ -14,20 +14,34 @@ import NavigationButtons from "@/components/NavigationButtons";
 export default {
   name: "TheHeader",
   components: { NavigationButtons },
+  data: () => ({
+    showHeader: true,
+    lastScrollPosition: 0,
+    scrollOffset: 40,
+  }),
   props: {
-    msg: String,
+    toggleModalMenu: Function,
   },
   mounted() {
+    this.lastScrollPosition = window.scrollY;
     window.addEventListener("scroll", this.onScroll);
   },
-  methods: {
-    onScroll() {},
-  },
-  unmounted() {
+  beforeUnmount() {
     window.removeEventListener("scroll", this.onScroll);
+  },
+  methods: {
+    onScroll() {
+      if (window.scrollY < 0) {
+        return;
+      }
+      if (
+        Math.abs(window.scrollY - this.lastScrollPosition) < this.scrollOffset
+      ) {
+        return;
+      }
+      this.showHeader = window.scrollY < this.lastScrollPosition;
+      this.lastScrollPosition = window.scrollY;
+    },
   },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>

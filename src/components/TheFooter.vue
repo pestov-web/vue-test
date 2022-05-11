@@ -1,19 +1,21 @@
 <template>
   <footer class="footer">
     <div class="footer__container">
-      <InformationForBuyers />
-      <AboutUs />
-      <SubscribeNewsletter />
+      <div class="footer__links-container">
+        <FooterLinksList :itemList="informationList" title="покупателям" />
+        <FooterLinksList :itemList="aboutList" title="о нас" />
+      </div>
+      <div class="footer__form"><SubscribeNewsletter /></div>
     </div>
   </footer>
 </template>
 
 <script>
-import InformationForBuyers from "@/components/InformationForBuyers";
-import AboutUs from "@/components/AboutUs";
 import SubscribeNewsletter from "@/components/SubscribeNewsletter";
+import FooterLinksList from "@/components/FooterLinksList";
 export default {
   name: "TheFooter",
-  components: { SubscribeNewsletter, AboutUs, InformationForBuyers },
+  components: { FooterLinksList, SubscribeNewsletter },
+  props: ["aboutList", "informationList"],
 };
 </script>
